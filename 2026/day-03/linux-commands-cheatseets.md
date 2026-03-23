@@ -1,9 +1,8 @@
-# 🐧 Linux Commands Cheat Sheet (Beginner → Practical)
+# Linux Commands Cheat Sheet 
 
 ---
 
-## 🔹 Process Management (Debug running apps)
-
+## 🔹 Process Management 
 - `whoami` – Check current user (useful in permission issues).
 - `uptime` – Check system load & uptime.
 - `ps aux` – View all running processes.
@@ -18,12 +17,10 @@
 - `renice -n 5 <PID>` – Change running process priority.
 - `uname -a` – System/kernel details.
 
-💡 Tip: Use `top` + `kill` together to quickly fix high CPU issues.
 
 ---
 
-## 🔹 File System (Navigate & manage files)
-
+## 🔹 File System 
 - `pwd` – Show current directory.
 - `ls -lh` – List files with size (most used).
 - `ls -a` – Show hidden files.
@@ -38,7 +35,7 @@
 
 ---
 
-## 🔹 File Viewing & Logs (Most used in DevOps)
+## 🔹 File Viewing & Logs
 
 - `cat <file>` – Print file content.
 - `less <file>` – Scroll through large files.
@@ -59,7 +56,7 @@
 
 ---
 
-## 🔹 Networking Troubleshooting (Critical)
+## 🔹 Networking Troubleshooting 
 
 - `ping google.com` – Check internet connectivity.
 - `ip addr` – View IP address.
