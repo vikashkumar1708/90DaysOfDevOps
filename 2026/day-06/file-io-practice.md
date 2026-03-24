@@ -12,14 +12,12 @@ Practice basic file operations using fundamental Linux commands:
 - Read file content  
 
 ---
- 📁 Step 1: Create a File
-
+ 📁 Steps
 ```bash
 touch notes.txt
-echo "This is my first Linux file" > notes.txt
-echo "This is my first Linux file" > notes.txt
-echo "Adding a second line" >> notes.txt
-echo "Learning Linux step by step" >> notes.txt
+echo "my name is vikash" > notes.txt
+echo "#90DaysOfDevOps" > notes.txt
+echo "I am studying DevOps" >> notes.txt
 cat notes.txt
-head notes.txt
-tail notes.txt
+head -n 2 notes.txt
+tail -n 2 notes.txt
