@@ -14,16 +14,3 @@ Run a focused troubleshooting drill on the SSH service by:
 
 ---
 
-## 🔍 Step 1: Check SSH Service
-
-```bash
-systemctl status ssh
-
-# CPU & Memory
-top
-
-# Memory usage
-free -h
-
-# Disk usage
-df -h
