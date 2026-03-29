@@ -10,42 +10,46 @@
 ---
 
 ### Processes & Services
+```bash
 Commands:
 - ps aux
 - systemctl status ssh
 - journalctl -u ssh
-
+```
 Observation:
 - Process visibility, service health, and logs are key for troubleshooting
 
 ---
 
 ### File
+```bash
 Commands practiced:
 - echo "DevOps" >> notes.txt
 - chmod +x script.sh
 - chown tokyo:vault-team devops-file.txt
 - ls -l
 - mkdir test-dir
-
+```
 ---
 
 ### Cheat Sheet (Top Commands)
+```bash
 - ls -l
 - ps aux
 - chmod
 - chown
 - systemctl status
-
+```
 ---
 
 ### User & Group Practice
+```bash
 - sudo useradd testuser
 - sudo groupadd testgroup
 - sudo chown testuser:testgroup devops-file.txt
 - id testuser
 - ls -l devops-file.txt
-
+```
 ---
 
 ## Self-Check
