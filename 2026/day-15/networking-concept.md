@@ -49,23 +49,28 @@ ip addr show
 Why subnet?
  - Better network management
  - Efficient IP usage
-#CIDR Table
-  CIDR	Subnet Mask	        Total IPs	    Usable Hosts
-  /24	  255.255.255.0	         256	          254
-  /16	  255.255.0.0	          65536	         65534
-  /28	  255.255.255.240	        16	           14
+##  CIDR Table
+
+| CIDR | Subnet Mask       | Total IPs | Usable Hosts |
+|------|------------------|-----------|--------------|
+| /24  | 255.255.255.0    | 256       | 254          |
+| /16  | 255.255.0.0      | 65536     | 65534        |
+| /28  | 255.255.255.240  | 16        | 14           |
 
 ## Task 4: Ports
 - Ports identify services running on a system
 
- Port	   Service
-  22	     SSH
-  80	     HTTP
-  443	     HTTPS
-  53	     DNS
-  3306	   MySQL
-  6379	   Redis
-  27017	   MongoDB
+##   Ports & Services
+
+| Port | Service |
+|------|---------|
+| 22   | SSH     |
+| 80   | HTTP    |
+| 443  | HTTPS   |
+| 53   | DNS     |
+| 3306 | MySQL   |
+| 6379 | Redis   |
+| 27017| MongoDB |
 ```bash
 ss -tulnp
 ```
