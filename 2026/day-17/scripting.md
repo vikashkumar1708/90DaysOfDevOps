@@ -1,6 +1,5 @@
 # Day 17 – Shell Scripting: Loops, Arguments & Error Handling
 
-Today’s focus was on writing and understanding shell scripts that use loops, handle command-line arguments, and include basic error handling. These are essential skills for automating DevOps workflows and writing reliable scripts that can run in various environments.
 
 ---
 
