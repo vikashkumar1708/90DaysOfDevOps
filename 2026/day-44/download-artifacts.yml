@@ -1,0 +1,24 @@
+name: download artifact
+on:
+    workflow_dispatch:
+jobs:
+    upload_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: generating artifact
+              run: echo "test for downloading artifact" > demo.txt
+
+            - name: uploading artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: downloading artifact
+                path: demo.txt
+
+    download_job:
+        runs-on: ubuntu-latest
+        needs: [upload_job]
+        steps:
+            - name: downloading artifact
+              uses: actions/download-artifact@v4
+              with:
+                name: downloading artifact

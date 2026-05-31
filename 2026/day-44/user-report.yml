@@ -1,0 +1,29 @@
+name: user report
+on:
+    workflow_dispatch:
+jobs:
+    user-report:
+        runs-on: ubuntu-latest
+        steps:
+            - name: code checkout
+              uses: actions/checkout@v4
+
+            - name: installing python
+              uses: actions/setup-python@v4
+              with:
+                python-version: "3.13"
+
+            - name: Cache pip dependencies
+              uses: actions/cache@v4
+              with:
+               path: ~/.cache/pip
+               key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+               restore-keys: |
+                 ${{ runner.os }}-pip-
+
+
+            - name: installing requirements
+              run: pip install -r requirements.txt
+
+            - name: running code
+              run: python scripts/app.py
