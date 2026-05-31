@@ -1,0 +1,28 @@
+name: hello
+on:
+    workflow_dispatch:
+
+jobs:
+    greet:
+      runs-on: ubuntu-latest
+      steps:
+       - name: code checkout
+         uses: actions/checkout@v4
+
+       - name: greeting hello
+         run: echo "hello from github actions!"
+
+       - name: date and time
+         run: date
+       
+       - name: triggering branch name
+         run: echo " this is the name of the branch that triggered the run ${{ github.ref_name }}"
+       
+       - name: list of files in this repo
+         run: ls -a
+
+       - name: runner's operating system
+         run: uname -a
+
+       - name: creating a pipeline with failed command
+         run: echo vikash
