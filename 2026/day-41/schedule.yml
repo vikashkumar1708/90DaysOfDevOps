@@ -1,0 +1,11 @@
+name: schedule
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+
+jobs:
+    scheduler:
+        runs-on: ubuntu-latest
+        steps:
+            - name: scheduler
+              run: echo "this workflow run at mid night"
