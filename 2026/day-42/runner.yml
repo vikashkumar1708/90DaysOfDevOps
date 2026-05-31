@@ -1,0 +1,28 @@
+name: runner
+on:
+    workflow_dispatch:
+
+jobs:
+  runners:
+    runs-on: ${{ matrix.os }}
+    strategy:
+        matrix: 
+            os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+       - name: print os name
+         run: echo " os name is ${{matrix.os}}"
+
+       - name: print hostname
+         run: hostname
+
+       - name: current user running the job
+         run: | 
+          echo " current user running the job : ${{github.actor}}"
+
+       - name: runn specific command in ubuntu
+         if: matrix.os == 'ubuntu-latest'
+         run: |
+           docker --version
+           python --version
+           node --version
+           git --version

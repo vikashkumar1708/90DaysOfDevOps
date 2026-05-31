@@ -1,0 +1,19 @@
+name: self-hosted runner with label
+on:
+    workflow_dispatch:
+jobs:
+    self-hosted:
+        runs-on: [ self-hosted, my-linux-runner]
+
+        steps:
+          - name: print hostname
+            run: hostname
+
+          - name: present working directory
+            run: pwd
+
+          - name: creating a file
+            run: |
+              echo "this is self osted runner file" > runner.txt
+          - name: verifying if file exixts or not
+            run: ls -a
