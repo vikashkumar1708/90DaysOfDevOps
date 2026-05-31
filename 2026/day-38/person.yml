@@ -1,0 +1,12 @@
+name: vikash
+role: DevOps engineer
+experience_years: 0
+learning: true
+tools:
+  - linux
+  - docker
+  - github-actions
+  - kubernetes
+  - terraform
+
+hobbies: [books,gym,cooking]

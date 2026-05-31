@@ -1,0 +1,13 @@
+name: server-app
+ip: 49.43.43.173
+port: 8080
+startup__script: |
+ echo" this is nginx server"
+ systemctl start nginx
+ echo"nginx started successfully"
+database:
+  host: mysql
+  name: mysql-database
+  credentials: 
+    user: root
+    password: Test@123
