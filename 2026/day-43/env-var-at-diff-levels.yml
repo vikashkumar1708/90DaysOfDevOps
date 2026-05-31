@@ -1,0 +1,21 @@
+name: environment varibales at different levels
+on:
+    workflow_dispatch:
+env:
+    APP_NAME: myapp   # workflow level
+
+jobs:
+    demo:
+        env:
+            ENVIRONMENT: staging   # job level
+        runs-on: ubuntu-latest
+        steps:
+            - name: printing all the environments
+              env:
+                VERSION: 1.0.0     # step level
+              run: |
+                echo "this is env at workflow level: $APP_NAME"
+                echo "this is env at job level: $ENVIRONMENT"
+                echo "this is env at step level: $VERSION"
+                echo "Commit SHA: ${{ github.sha }}"
+                echo "Actor: ${{ github.actor }}"

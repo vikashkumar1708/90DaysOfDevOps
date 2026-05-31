@@ -1,0 +1,26 @@
+name: condition
+on:          # [push,pull_request]
+   workflow_dispatch:
+jobs:
+    conditional-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: this step runs when branch is main
+              if: github.ref_name == 'main'
+              run: echo "this code runs on main branch"
+           
+            - name: this is failed step
+              continue-on-error: true 
+              run: exit 1
+
+            - name: this step runs only if previous branch is failed
+              if: failure()
+              run: echo "this runs as previous step is failed"
+
+
+    push-event:
+        if: github.event_name == 'push'
+        runs-on: ubuntu-latest
+        steps:
+             - name: this only runs on push event
+               run: echo "only runs on push events"
